@@ -4,41 +4,52 @@ import java.util.Scanner;
 public class CellPhoneApplication {
     public static void main(String[] args) {
 
-        CellPhone myPhone = new CellPhone();
+        CellPhone cell1 = new CellPhone();
+        CellPhone cell2 = new CellPhone();
         Scanner myScanner = new Scanner(System.in);
-        String userInput;
 
-//        int serialNumber = 1234567;
-//        String phoneModel = "iPhone 12 Pro Max";
-//        String carrier = "T-Mobile";
-//        String phoneNumber = "347-123-4567";
-//        String owner = "Dave";
-
-
+        //Cellphone 1 - USER Input
         System.out.println("What is the serial number? ");
         int serialNumber = Integer.parseInt(myScanner.nextLine());
-        myPhone.setSerialNumber(serialNumber);
+        cell1.setSerialNumber(serialNumber);
 
         System.out.println("What model is the phone? ");
         String phoneModel = myScanner.nextLine();
-        myPhone.setModel(phoneModel);
+        cell1.setModel(phoneModel);
 
         System.out.println("Who is the carrier? ");
         String carrier = myScanner.nextLine();
-        myPhone.setCarrier(carrier);
+        cell1.setCarrier(carrier);
 
         System.out.println("What is the phone number? ");
         String phoneNumber = myScanner.nextLine();
-        myPhone.setPhoneNumber(phoneNumber);
+        cell1.setPhoneNumber(phoneNumber);
 
         System.out.println("Who is the owner of the phone? ");
         String owner = myScanner.nextLine();
-        myPhone.setOwner(owner);
+        cell1.setOwner(owner);
+
+        //Cell 2
+        cell2.setOwner("Bruce Wayne");
+        cell2.setCarrier("T-Mobile");
+        cell2.setModel("Samsung Galaxy Note 34 Ultra Pro Max");
+        cell2.setPhoneNumber("347-299-9999");
 
 
-        System.out.println("Hello " + myPhone.getOwner() + " I see your serial number " + myPhone.getSerialNumber());
-        System.out.println("Your carrier: " + myPhone.getCarrier() + " and I see that you have have a " + myPhone.getModel());
+        System.out.println("--- Cellphone 1 ----");
+        display(cell1);
+        System.out.println("--- Cellphone 2 ----");
+        display(cell2);
+
+        System.out.println("####################                                                                         ");
+        cell1.dial(cell2.getPhoneNumber());
 
         myScanner.close();
+    }
+
+    public static void display(CellPhone phone) {
+        System.out.println("Owner: " + phone.getOwner());
+        System.out.println("Model: " + phone.getModel());
+        System.out.println("Phone number: " + phone.getPhoneNumber());
     }
 }
