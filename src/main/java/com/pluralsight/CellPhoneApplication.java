@@ -6,7 +6,11 @@ public class CellPhoneApplication {
 
         CellPhone cell1 = new CellPhone();
         CellPhone cell2 = new CellPhone();
+        CellPhone cell3 = new CellPhone(7654321,"Nothing 5 Plus", "AT&T",  "585-222-3333", "Ransel Abel Perez");
         Scanner myScanner = new Scanner(System.in);
+
+
+        display(cell3);
 
         //Cellphone 1 - USER Input
         System.out.println("What is the serial number? ");
@@ -28,6 +32,8 @@ public class CellPhoneApplication {
         System.out.println("Who is the owner of the phone? ");
         String owner = myScanner.nextLine();
         cell1.setOwner(owner);
+
+        cell3.dial(cell1.getPhoneNumber());
 
         //Cell 2
         cell2.setOwner("Bruce Wayne");

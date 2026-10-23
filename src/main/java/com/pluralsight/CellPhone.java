@@ -7,7 +7,6 @@ public class CellPhone {
     private String phoneNumber;
     private String owner;
 
-//    int serialNumber, String model, String carrier, String phoneNumber, String owner
     public CellPhone(){
         //Cellphone() (method) Constructor for CellPhone Class :D
 
@@ -16,6 +15,14 @@ public class CellPhone {
         this.carrier = "";
         this.phoneNumber = "";
         this.owner = "";
+    }
+
+    public CellPhone(int serialNumber, String model, String carrier, String phoneNumber, String owner){
+        this.serialNumber = serialNumber;
+        this.model = model;
+        this.carrier = carrier;
+        this.phoneNumber = phoneNumber;
+        this.owner = owner;
     }
 
 
