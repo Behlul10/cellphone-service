@@ -39,5 +39,6 @@ public class CellPhoneApplication {
         System.out.println("Hello " + myPhone.getOwner() + " I see your serial number " + myPhone.getSerialNumber());
         System.out.println("Your carrier: " + myPhone.getCarrier() + " and I see that you have have a " + myPhone.getModel());
 
+        myScanner.close();
     }
 }
